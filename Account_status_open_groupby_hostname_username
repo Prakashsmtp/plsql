@@ -1,0 +1,5 @@
+SELECT hostname, username, COUNT(*) 
+FROM dba_users 
+WHERE ACCOUNT_STATUS LIKE 'OPEN%' 
+GROUP BY hostname, username 
+ORDER BY COUNT(*) ASC;
